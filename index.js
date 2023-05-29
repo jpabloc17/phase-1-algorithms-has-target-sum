@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,10 +16,18 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  -create a nested for loop
+  -take the first item on the array
+  -add up it to the following number in the array
+  -compare the result with the target number
+  - if it's equal return true
+  -if it's not true keep interacting through the rest of the array
+  -if there is not a pair that adds up equal to the target return false
 */
 
 /*
   Add written explanation of your solution here
+
 */
 
 // You can run `node index.js` to view these console logs
